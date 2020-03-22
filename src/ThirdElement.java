@@ -19,6 +19,5 @@ public class ThirdElement {
         System.out.println(nameList);
         System.out.println(nameList.get(2));
 
-
     }
 }
