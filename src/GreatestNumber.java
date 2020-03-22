@@ -7,24 +7,15 @@ public class GreatestNumber {
 
         ArrayList<Integer> intList = new ArrayList<>();
 
-        System.out.println("Enter some integers: ");
-
-        while(true) {
-            Integer num = Integer.valueOf(input.nextLine());
-            if(num == -1){
-                break;
-            }else{
-                intList.add(num);
-            }
-        }
-
-        int greatest = 0;
+        System.out.println("Enter an integer: ");
+        Integer num = Integer.valueOf(input.nextLine());
+        int place = 0;
 
         for(int i = 0; i < intList.size(); i ++){
-            if (intList.get(i) > greatest) {
-                greatest = intList.get(i);
+            if (intList.get(i) == num) {
+                place = i;
             }
         }
-        System.out.println("Greatest number: " + greatest);
+        System.out.println("Greatest number: ");
     }
 }
