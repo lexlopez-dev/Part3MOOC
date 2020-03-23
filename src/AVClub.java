@@ -2,16 +2,16 @@ import java.util.Scanner;
 
 public class AVClub {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        Scanner reader = new Scanner(System.in);
 
-        System.out.println("Enter a sentence: ");
-        String line = input.nextLine();
-        String[] pieces = line.split(" ");
-
-        for(int i = 0;i < pieces.length; i++){
-            if(pieces[i].contains("av")){
-                System.out.println(pieces[i]);
+        while (true) {
+            String input = reader.nextLine();
+            if (input.equals("")) {
+                break;
             }
+
+            String[] pieces = input.split(",");
+            System.out.println("Name: " + pieces[0] + ", age: " + pieces[1]);
         }
     }
 }
